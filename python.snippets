@@ -1,0 +1,25 @@
+snippet fix "Pytest fixture" b
+@pytest.fixture
+def ${1:name}():
+	${2:return ${3}}
+endsnippet
+
+
+snippet idef "Default imports" b
+import numpy as np
+import scipy as sp
+import matplotlib.pyplot as plt
+endsnippet
+
+
+snippet isio "Import scipy.io" b
+import scipy.io as sio
+endsnippet
+
+snippet ipt "Import pytest" b
+import pytest
+endsnippet
+
+snippet p "print(variable)" b
+print(${1:${3:'\{0\}'}.format(${2})})
+endsnippet
