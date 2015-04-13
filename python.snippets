@@ -1,19 +1,25 @@
 snippet fix "Pytest fixture" b
 @pytest.fixture
 def ${1:name}():
-	${2:return ${3}}
+    ${2:return ${3}}
 endsnippet
 
 
 snippet idef "Default imports" b
+from __future__ import division, print_function
 import numpy as np
 import scipy as sp
+import pandas as pd
 import matplotlib.pyplot as plt
 endsnippet
 
 
 snippet isio "Import scipy.io" b
 import scipy.io as sio
+endsnippet
+
+snippet isw "Import scipy.wavfile" !b
+from scipy.io import wavfile
 endsnippet
 
 snippet ipt "Import pytest" b
@@ -24,6 +30,19 @@ snippet p "print(variable)" b
 print(${1:${3:'\{0\}'}.format(${2})})
 endsnippet
 
-snippet na "np.array"
-np.array(${VISUAL:array})
+snippet na "np.asarray"
+np.asarray(${VISUAL:array})
+endsnippet
+
+snippet docs "Docstring"
+"""${1:comment}"""$0
+endsnippet
+
+snippet mat "Load from matlab array"
+${2:${1:varname}} = mat['$1'].squeeze()
+endsnippet
+
+snippet seed "Set numpy random seed" !b
+# Set random seed for consistency
+np.random.seed(12)
 endsnippet
